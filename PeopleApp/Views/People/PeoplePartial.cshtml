@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PeopleApp.Models.Person>
+
+@foreach(var person in Model) {
+<div class="person-container">
+    <table>
+    <tr valign="top">
+        <td>
+            <img class="profile-image" src="~/images/default-profile.png"/>
+        </td>
+        <td width="200px">
+            <div class="person-name">
+                @Html.DisplayFor(modelItem => person.FirstName) 
+                @Html.DisplayFor(modelItem => person.LastName)
+            </div>
+            <div class="person-address">
+                @Html.DisplayFor(modelItem => person.Address)
+                <br />
+                @Html.DisplayFor(modelItem => person.City), @Html.DisplayFor(modelItem => person.State)
+                <br />
+                @Html.DisplayFor(modelItem => person.Zip)
+            </div>
+            <div class="person-age">Age: @Html.DisplayFor(modelItem => person.Age)</div>
+        </td>
+        <td>
+            <span class="person-interests-title">Interests:</span>
+            <p class="person-interests">
+                @Html.DisplayFor(modelItem => person.Interests)
+            </p>
+        </td>
+    </tr>
+    </table>
+
+    <div class="links" >
+        <a asp-action="Edit" asp-route-id="@person.ID">Edit</a>
+    </div>
+
+</div>
+
+
+}
