@@ -1,0 +1,106 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.search-container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+.search-container td {
+    padding:10px;
+}
+
+.person-container {
+    border-bottom: solid 1px gray;
+    padding: 15px;
+
+}
+
+.person-container:hover {
+    background-color: #E5EAEE;
+}
+
+.person-container:hover .links {
+    visibility: visible;
+}
+
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-right: 15px;
+}
+
+.person-name {
+    
+    font-size: 16px;
+    color: #0F3351;
+}
+
+.person-address {
+    
+    font-size: 12px;
+    color: #3D6280;
+}
+
+.person-age {
+    font-size: 12px;
+    color: #0F3351;
+    padding-top: 10px;
+}
+
+.person-interests-title {
+    color: #0F3351;
+}
+
+.person-interests {
+    font-size: 13px;
+    color: #3D6280;
+    padding-left: 5px;
+}
+
+.links {
+    float: right;
+    position: relative;
+    top: -100px;
+    visibility:hidden;
+
+}
